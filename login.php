@@ -59,10 +59,13 @@ $_SESSION['captcha_code'] = rand(1000, 9999);
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body class="bg-dark">
-    <div class="sufee-login d-flex align-content-center flex-wrap">
-        <div class="container">
+    <div class="sufee-login d-flex align-items-center justify-content-center flex-column">
+        <div class="container text-center">
+            <img src="CVSC_logo.png" alt="College logo" width="250" height="180" class="img-fluid">
+            <h1 style="color:blue; margin-top:10px;">College of Veterinary Science</h1>
+            <h2 style="color:blue; margin-top:10px;">Online Hostel Leave System</h2>
             <div class="login-content">
-                <div class="login-form mt-150">
+                <div class="login-form mt-4">
                     <form method="post">
                         <div class="form-group">
                             <label>Email address</label>
@@ -76,7 +79,7 @@ $_SESSION['captcha_code'] = rand(1000, 9999);
                             <label>CAPTCHA: <?php echo $_SESSION['captcha_code']; ?></label>
                             <input type="text" name="captcha" class="form-control" placeholder="Enter the CAPTCHA" required>
                         </div>
-                        <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                        <button type="submit" class="btn btn-success btn-block">Sign in</button>
                         <div class="result_msg"><?php echo $msg?></div>
                     </form>
                 </div>
